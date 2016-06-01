@@ -1,0 +1,21 @@
+{% extends 'based.html' %}
+{% block title %}
+Envio de Solicictudes
+{% endblock %}
+
+{% block branding %}<h1>Envío de Solicicitudes  </h1>  {% endblock %}
+
+
+{% block breadcrumbs %}
+    Por favor rellene los campos para el envío de su solicitud
+    {% endblock %}
+{% block content %}
+<center>
+    <img src="http://sandbox1.ufps.edu.co/imagen/ingSistemas.jpg" alt="">
+
+      <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Enviar Solicitud</button>
+    </form>
+</center>
+{% endblock %}
